@@ -16,9 +16,7 @@ def get_args():
         description='Jump the Five',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument('positional',
-                        metavar='str',
-                        help='Input text')
+    parser.add_argument('positional', metavar='str', help='Input text')
 
     return parser.parse_args()
 
@@ -29,8 +27,21 @@ def main():
 
     args = get_args()
     pos_arg = args.positional
-
-    print(f'positional = "{pos_arg}"')
+    jumper = {
+        '1': '9',
+        '2': '8',
+        '3': '7',
+        '4': '6',
+        '5': '0',
+        '6': '4',
+        '7': '3',
+        '8': '2',
+        '9': '1',
+        '0': '5'
+    }
+    for char in pos_arg:
+        print(jumper.get(char, char), end='')
+    print()
 
 
 # --------------------------------------------------
