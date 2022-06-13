@@ -48,10 +48,10 @@ def main():
         tb += num_bytes
         tw += num_words
 
-        print(f'{num_lines:8} {num_words:8} {num_bytes:8} {fh.name:8}')
+        print(f'{num_lines:8}{num_words:8}{num_bytes:8} {fh.name}')
 
     if len(args.file) > 1:
-        print(f'{tl:8} {tw:8} {tb:8} total')
+        print(f'{tl:8}{tw:8}{tb:8} total')
 
 
 # --------------------------------------------------
